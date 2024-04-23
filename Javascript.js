@@ -123,7 +123,7 @@ const bonusAdjectives = [
     },
     {
         term: "Colorful (Flowers)",
-        definition: "When flowers have vibrant and varied colors, we describe them as colorful. It means they have different hues like red, yellow, purple, etc. Example: 'The garden is full of colorful flowers, making it a beautiful sight to behold.'"
+        definition: "When flowers have vibrant and varied colors, we describe them as colorful. It means they have different hues like red, yellow, purple, etc. Example: 'The garden is full of colorful flowers.'"
     },
     {
         term: "Friendly (People)",
