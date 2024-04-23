@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Quiz</title>
+    <style>
+        /* Your CSS styles here */
+         /* Green background for buttons */
+button {
+    background-color: green;
+    color: white; /* Text color */
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding around text */
+    margin: 10px; /* Add margin for spacing */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Red border animation on hover */
+button:hover {
+    border-color: red; /* Change border color on hover */
+    animation: borderAnimation 1s infinite alternate; /* Apply border animation */
+}
+
+/* Keyframe animation for border */
+@keyframes borderAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+/* Font and color for text on the first page */
+#start-page {
+    font-weight: bold; /* Make text bold */
+    color: black; /* Set text color to black */
+}
+
+/* Set background image */
+body {
+    background-image: url(''); /* Replace 'your-image-url.jpg' with the URL of your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+/* Font for questions */
+.question p {
+    font-family: Arial, sans-serif; /* Set font family */
+    font-weight: bold; /* Make text bold */
+    color: black; /* Set text color to black */
+}
+
+/* Font and color for explanations */
+#quiz-container .explanation {
+    color: green;
+}
+
+.correct {
+    color: green;
+}
+
+/* Style incorrect answers */
+.incorrect {
+    color: red;
+}
+/* Style for the container of bonus adjectives */
+#bonus-adjectives-container {
+    border: 2px solid #ccc; /* Border around the container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Style for each adjective */
+.adjective {
+    border-bottom: 1px solid #ccc; /* Border between adjectives */
+    padding-bottom: 10px; /* Add some space between adjectives */
+}
+
+/* Style for the term of the adjective */
+.adjective h2 {
+    color: #007bff; /* Color of the term */
+    font-weight: bold; /* Bold font for the term */
+}
+
+/* Style for the definition of the adjective */
+.adjective p {
+    color: #333; /* Color of the definition */
+}
+
+/* Add some margin to the bottom of the container */
+#bonus-adjectives-container {
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <img src="Beach.jpg" alt="Background Image">
+    <div id="start-page">
+        <form id="start-form" onsubmit="startQuiz(event)">
+            <label for="name">To start the quiz, please enter your name followed by "incluzio". Ex: (John incluzio) This quiz application and its content were created by Mikael using JavaScript for private use only. Enjoy the quiz and learn some bonus adjectives vocabulary. Please follow all the clickable instructions. </label>
+            <input type="text" id="name" required>
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quiz-container" style="display: none;"> <!-- Initially hidden -->
+        <!-- Quiz questions will be generated here -->
+    </div> 
+
+    <script src="Javascript.js"></script>
+</body>
+</html>
